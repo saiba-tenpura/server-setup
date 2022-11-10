@@ -1,0 +1,4 @@
+---
+firewall_disable_ufw: true
+firewall_allowed_tcp_ports:
+  - "22"

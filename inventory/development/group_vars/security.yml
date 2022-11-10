@@ -1,0 +1,4 @@
+---
+security_autoupdate_enabled: false
+security_ssh_allowed_users:
+  - saiba
