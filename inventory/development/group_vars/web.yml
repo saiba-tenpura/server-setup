@@ -1,0 +1,9 @@
+---
+firewall_additional_rules:
+  - 'iptables -A INPUT -m conntrack --ctstate INVALID -j DROP'
+  - 'iptables -A INPUT -p tcp -m multiport --dports 80,443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT'
+  - 'iptables -A OUTPUT -p tcp -m multiport --dports 80,443 -m conntrack --ctstate ESTABLISHED -j ACCEPT'
+firewall_ip6_additional_rules:
+  - 'ip6tables -A INPUT -m conntrack --ctstate INVALID -j DROP'
+  - 'ip6tables -A INPUT -p tcp -m multiport --dports 80,443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT'
+  - 'ip6tables -A OUTPUT -p tcp -m multiport --dports 80,443 -m conntrack --ctstate ESTABLISHED -j ACCEPT'
