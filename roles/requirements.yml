@@ -1,4 +1,7 @@
 ---
 roles:
   - name: geerlingguy.security
-  - name: geerlingguy.firewall
+  - src: git@github.com:saiba-tenpura/ansible-role-firewall.git
+    version: custom
+    name: saiba-tenpura.firewall
+    scm: git

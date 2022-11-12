@@ -2,10 +2,8 @@
 security_autoupdate_enabled: false
 security_ssh_allowed_users:
   - saiba
+security_sudoers_passworded:
+  - saiba
 
 firewall_allowed_tcp_ports:
   - '22'
-firewall_additional_rules:
-  - 'iptables -A INPUT -m conntrack --ctstate INVALID -j DROP'
-firewall_ip6_additional_rules:
-  - 'ip6tables -A INPUT -m conntrack --ctstate INVALID -j DROP'
