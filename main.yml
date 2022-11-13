@@ -1,16 +1,13 @@
 ---
-- name: Setup server
+- name: Perform general server setup
   hosts: all
-  become: yes
   gather_facts: true
-  # remote_user: saiba
   tasks:
     - name: Update apt cache (on Debian).
       ansible.builtin.apt:
         update_cache: true
         cache_valid_time: 3600
       when: ansible_os_family == 'Debian'
-
   roles:
     - role: geerlingguy.security
     - role: saiba-tenpura.firewall

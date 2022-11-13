@@ -1,2 +1,7 @@
-[development]
+debug-lc-01
+
+[docker_hosts]
+debug-lc-01
+
+[webservers]
 debug-lc-01

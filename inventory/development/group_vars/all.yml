@@ -1,9 +1,10 @@
 ---
-security_autoupdate_enabled: false
+security_ssh_port: 22
 security_ssh_allowed_users:
   - saiba
 security_sudoers_passworded:
   - saiba
+security_autoupdate_enabled: false
 
 firewall_allowed_tcp_ports:
-  - '22'
+  - 22
