@@ -1,5 +1,6 @@
 ---
 roles:
+  - name: geerlingguy.docker
   - name: geerlingguy.security
   - src: git@github.com:saiba-tenpura/ansible-role-firewall.git
     version: custom

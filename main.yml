@@ -11,3 +11,8 @@
   roles:
     - role: geerlingguy.security
     - role: saiba-tenpura.firewall
+
+- name: Setup docker hosts
+  hosts: docker_hosts
+  roles:
+    - role: geerlingguy.docker
