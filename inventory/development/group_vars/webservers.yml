@@ -1,5 +1,5 @@
 ---
 firewall_allowed_tcp_ports:
-  - 22
+  - '{{ main_ssh_port }}'
   - 80
   - 443

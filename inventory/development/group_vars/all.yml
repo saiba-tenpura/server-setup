@@ -1,10 +1,13 @@
 ---
-security_ssh_port: 22
+main_ssh_port: 22
+main_system_user: saiba
+
+security_ssh_port: '{{ main_ssh_port }}'
 security_ssh_allowed_users:
-  - saiba
+  - '{{ main_system_user }}'
 security_sudoers_passworded:
-  - saiba
+  - '{{ main_system_user }}'
 security_autoupdate_enabled: false
 
 firewall_allowed_tcp_ports:
-  - 22
+  - '{{ main_ssh_port }}'
