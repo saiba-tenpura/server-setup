@@ -9,6 +9,7 @@
         cache_valid_time: 3600
       when: ansible_os_family == 'Debian'
   roles:
+    - role: saiba-tenpura.common
     - role: geerlingguy.security
     - role: saiba-tenpura.firewall
 
