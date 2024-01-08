@@ -1,5 +1,4 @@
 ---
-firewall_allowed_tcp_ports:
-  - '{{ main_ssh_port }}'
+webserver__firewall_ports:
   - 80
   - 443
