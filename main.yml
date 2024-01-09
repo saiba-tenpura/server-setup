@@ -2,9 +2,9 @@
 - name: Perform general server setup
   hosts: all
   gather_facts: true
-  tasks:
+  pre_tasks:
     - name: Gather allowed firewall ports based on groups
-      set_fact:
+      ansible.builtin.set_fact:
         firewall_allowed_tcp_ports: "{{ firewall_allowed_tcp_ports + lookup('vars', item) }}"
       loop: "{{ lookup('varnames', '.*__firewall_ports').split(',') }}"
     - name: Update apt cache (on Debian).
@@ -13,9 +13,9 @@
         cache_valid_time: 3600
       when: ansible_os_family == 'Debian'
   roles:
-    - role: saiba-tenpura.common
-    - role: geerlingguy.security
-    - role: saiba-tenpura.firewall
+    - saiba-tenpura.common
+    - geerlingguy.security
+    - saiba-tenpura.firewall
 
 - name: Setup docker hosts
   hosts: docker_hosts
