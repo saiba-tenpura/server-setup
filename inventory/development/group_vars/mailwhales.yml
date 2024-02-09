@@ -1,0 +1,7 @@
+---
+mailwhale__firewall_ports:
+  - 25
+  - 465
+  - 587
+  - 143
+  - 993

@@ -5,3 +5,6 @@ debug-lc-01
 
 [webservers]
 debug-lc-01
+
+[mailwhales]
+debug-lc-01

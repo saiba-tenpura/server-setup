@@ -20,4 +20,9 @@
 - name: Setup docker hosts
   hosts: docker_hosts
   roles:
-    - role: geerlingguy.docker
+    - geerlingguy.docker
+
+- name: Setup mail whales
+  hosts: mailwhales
+  roles:
+    - saiba-tenpura.docker-mailserver
