@@ -41,9 +41,14 @@ Defines the user which is allowed to access the server via SSH, added as a sudoe
 ansible-galaxy install -r roles/requirements.yml
 ```
 
-## Execution
+## Setup Execution
 ```
-ansible-playbook -i inventory/development/ main.yml
+ansible-playbook -i inventory/example/ main.yml
+```
+
+## Updating mailservers
+```
+ansible-playbook -i inventory/example/ mailwhales.yml
 ```
 
 ## License

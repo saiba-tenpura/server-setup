@@ -1,0 +1,6 @@
+---
+- name: Setup mail whales
+  hosts: mailwhales
+  gather_facts: true
+  roles:
+    - saiba-tenpura.docker-mailserver
