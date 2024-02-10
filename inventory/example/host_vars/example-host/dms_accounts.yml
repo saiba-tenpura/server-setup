@@ -1,0 +1,7 @@
+---
+# Atleast use ansible-vault to encrypt this file.
+dms_accounts:
+  - email: postmaster@example.com
+    password: eX@mPl3_p4$5w0rd
+    aliases:
+      - dmarc.report@example.com

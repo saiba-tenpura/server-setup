@@ -1,0 +1,10 @@
+example-host ansible_user=main ansible_become=true
+
+[docker_hosts]
+example-host
+
+[webservers]
+example-host
+
+[mailwhales]
+example-host

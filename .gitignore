@@ -1,3 +1,5 @@
-inventory/production
+!inventory/
+inventory/*
+!inventory/example/
 roles/*
 !roles/requirements.yml

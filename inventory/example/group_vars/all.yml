@@ -1,6 +1,6 @@
 ---
 main_ssh_port: 22
-main_system_user: saiba
+main_system_user: main
 
 common_user: '{{ main_system_user }}'
 

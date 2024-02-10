@@ -1,0 +1,12 @@
+---
+dms_hostname: mail.example.com
+dms_env_vars:
+  ENABLE_FAIL2BAN: 1
+  SPOOF_PROTECTION: 1
+  SSL_DOMAIN: '{{ dms_hostname }}'
+  SSL_TYPE: letsencrypt
+
+dms_ipv6_enable: true
+
+dms_ssl_provider: traefik
+dms_ssl_email: email@example.com
