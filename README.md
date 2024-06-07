@@ -38,7 +38,7 @@ Defines the user which is allowed to access the server via SSH, added as a sudoe
 
 ## Installation
 ```
-ansible-galaxy install -r roles/requirements.yml
+ansible-galaxy install -r requirements.yml
 ```
 
 ## Setup Execution
