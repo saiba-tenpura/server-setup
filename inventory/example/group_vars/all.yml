@@ -1,14 +1,11 @@
 ---
-main_ssh_port: 22
-main_system_user: main
-
 common_user: '{{ main_system_user }}'
 common_key_url: https://github.com/user.keys
 
 security_ssh_port: '{{ main_ssh_port }}'
 security_ssh_allowed_users:
   - '{{ main_system_user }}'
-security_sudoers_passworded:
+security_sudoers_passwordless:
   - '{{ main_system_user }}'
 security_autoupdate_enabled: false
 

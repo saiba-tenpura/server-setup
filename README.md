@@ -24,17 +24,19 @@ For a full list of the executed actions and available configurations please refe
   * [ansible-role-firewall](https://github.com/saiba-tenpura/ansible-role-firewall/tree/custom) - A slightly modified version of the Ansible firewall role originally written by Jeff Geerling. (The exact differences can be viewed [here](https://github.com/geerlingguy/ansible-role-firewall/compare/master...saiba-tenpura:ansible-role-firewall:custom).)
 
 ## Inventory Variables
-A couple of additional variables are defined in the inventory group_vars to control multiple options of the executed roles.
+A couple of additional variables are defined in the inventories host_vars to control multiple options of the executed roles.
+
 ```
 main_ssh_port: 22
 ```
 
 Defines the port through which SSH is accessible and adds it to the allowed TCP ports for the firewall role. (Corresponding role variables: security_ssh_port, firewall_allowed_tcp_ports)
+
 ```
 main_system_user: main
 ```
 
-Defines the user which is allowed to access the server via SSH, added as a sudoer and is assigned to the docker group. (Corresponding role variables: security_ssh_allowed_users, security_sudoers_passworded, docker_users)
+Defines the user which is allowed to access the server via SSH, added as a sudoer and is assigned to the docker group. (Corresponding role variables: security_ssh_allowed_users, security_sudoers_passwordless, docker_users)
 
 ## Installation
 ```
@@ -46,7 +48,7 @@ ansible-galaxy install -r requirements.yml
 ansible-playbook -i inventory/example/ main.yml
 ```
 
-## Updating mailservers
+## Setup mailservers
 ```
 ansible-playbook -i inventory/example/ mailwhales.yml
 ```

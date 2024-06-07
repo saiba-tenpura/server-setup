@@ -1,0 +1,3 @@
+---
+main_ssh_port: 22
+main_system_user: main
