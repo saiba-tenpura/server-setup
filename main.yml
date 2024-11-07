@@ -17,12 +17,5 @@
     - geerlingguy.security
     - saiba-tenpura.firewall
 
-- name: Setup docker hosts
-  hosts: docker_hosts
-  roles:
-    - geerlingguy.docker
-
-- name: Setup mail whales
-  hosts: mailwhales
-  roles:
-    - saiba-tenpura.docker-mailserver
+- ansible.builtin.import_playbook: docker.yml
+- ansible.builtin.import_playbook: mailwhales.yml
