@@ -17,5 +17,8 @@
     - geerlingguy.security
     - saiba-tenpura.firewall
 
-- ansible.builtin.import_playbook: docker.yml
-- ansible.builtin.import_playbook: mailwhales.yml
+- name: Include docker playbook
+  ansible.builtin.import_playbook: docker.yml
+
+- name: Include mailwhale playbook
+  ansible.builtin.import_playbook: mailwhales.yml
