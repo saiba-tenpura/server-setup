@@ -11,8 +11,13 @@ The playbook configures the provided servers based on their given groups to quic
   * Setup a basic iptables firewall configuration only allowing access to port 22.
 
 **Group: docker_hosts**
-  * Setup a basic docker installation incl. the docker-compose plugin.
-  * Setup and add a customer user to the docker group.
+  * Setup a basic Docker installation incl. the docker-compose plugin.
+  * Setup and add a custom user to the Docker group.
+
+**Group: mailwhales**
+  * Setup a Docker Mailserver instance & configure it.
+  * Setup mail accounts & aliases.
+  * Setup additional firewall rules to allow access via SMTP, ESMTP, IMAP.
 
 **Group: webservers**
   * Setup additional firewall rules to allow access via HTTP & HTTPS.
