@@ -1,7 +1,9 @@
 ---
 roles:
   - name: geerlingguy.docker
+    version: 8.0.0
   - name: geerlingguy.security
+    version: 3.0.0
   - name: saiba-tenpura.common
     src: https://github.com/saiba-tenpura/ansible-role-common.git
     scm: git
